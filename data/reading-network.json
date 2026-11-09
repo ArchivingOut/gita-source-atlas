@@ -1,0 +1,124 @@
+{
+  "title": "Editorial reading network",
+  "method": "Thematic navigation links curated for discovery. These links are interpretive reading aids, not claims that the text itself encodes a formal ontology.",
+  "themes": [
+    {
+      "id": "dharma",
+      "label": "Dharma & discernment",
+      "color": "#d7b36a",
+      "refs": [
+        "2.7",
+        "2.31",
+        "3.35",
+        "18.47"
+      ]
+    },
+    {
+      "id": "action",
+      "label": "Action & renunciation",
+      "color": "#99b995",
+      "refs": [
+        "2.47",
+        "3.5",
+        "3.19",
+        "5.2",
+        "18.11"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "label": "Knowledge & self",
+      "color": "#9cb4cc",
+      "refs": [
+        "2.16",
+        "2.20",
+        "4.13",
+        "4.39",
+        "13.2"
+      ]
+    },
+    {
+      "id": "yoga",
+      "label": "Yoga & discipline",
+      "color": "#c59dd0",
+      "refs": [
+        "2.48",
+        "6.5",
+        "6.26",
+        "6.35",
+        "8.8"
+      ]
+    },
+    {
+      "id": "devotion",
+      "label": "Devotion & refuge",
+      "color": "#e5a789",
+      "refs": [
+        "9.22",
+        "9.26",
+        "12.6",
+        "12.13",
+        "18.66"
+      ]
+    },
+    {
+      "id": "cosmos",
+      "label": "Cosmos & manifestation",
+      "color": "#e1c889",
+      "refs": [
+        "7.7",
+        "9.4",
+        "10.20",
+        "11.12",
+        "11.32"
+      ]
+    },
+    {
+      "id": "nature",
+      "label": "Nature & qualities",
+      "color": "#8fbcb8",
+      "refs": [
+        "3.27",
+        "7.4",
+        "14.5",
+        "14.22",
+        "17.3"
+      ]
+    },
+    {
+      "id": "liberation",
+      "label": "Freedom & release",
+      "color": "#d49d9d",
+      "refs": [
+        "2.51",
+        "5.24",
+        "8.15",
+        "15.6",
+        "18.66"
+      ]
+    },
+    {
+      "id": "speech",
+      "label": "Speech, memory & teaching",
+      "color": "#b2a4d6",
+      "refs": [
+        "10.4",
+        "10.25",
+        "15.15",
+        "18.70"
+      ]
+    },
+    {
+      "id": "faith",
+      "label": "Faith & practice",
+      "color": "#d4ad76",
+      "refs": [
+        "4.39",
+        "6.47",
+        "9.3",
+        "17.3",
+        "18.65"
+      ]
+    }
+  ]
+}
