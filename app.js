@@ -9,7 +9,7 @@ const rows = ()=>corpus.filter(x=>x.chapter_number===selected.chapter).sort((a,b
 function verse(){return corpus.find(x=>x.chapter_number===selected.chapter&&x.verse_number===selected.verse);}
 function sourceUrl(){return 'https://github.com/gita/gita/blob/main/data/verse.json';}
 const sourceVerseCache=new Map();
-async function sourceVerseRecord(chapter,verse){const key=chapter+'.'+verse;if(!sourceVerseCache.has(key))sourceVerseCache.set(key,fetch('https://vedicscriptures.github.io/slok/'+chapter+'/'+verse).then(r=>{if(!r.ok)throw Error('Source unavailable');return r.json()}));return sourceVerseCache.get(key)}
+async function sourceVerseRecord(chapter,verse){const key=chapter+'.'+verse;if(!sourceVerseCache.has(key))sourceVerseCache.set(key,fetch('https://vedicscriptures.github.io/slok/'+chapter+'/'+verse,{signal:AbortSignal.timeout(12000)}).then(r=>{if(!r.ok)throw Error('Source unavailable');return r.json()}));try{return await sourceVerseCache.get(key)}catch(error){sourceVerseCache.delete(key);throw error}}
 const translationCache = new Map();
 const commentaryCache = new Map();
 const translationNames = {siva:'Swami Sivananda',gambir:'Swami Gambirananda',purohit:'Purohit Swami',san:'S. Sankaranarayan',adi:'Swami Adidevananda',raman:'Sri Ramanuja',sankar:'Sri Shankaracharya'};
