@@ -1,4 +1,4 @@
-const CACHE='gita-source-atlas-v5';
+const CACHE='gita-source-atlas-v6';
 const CORE=['./','./index.html','./styles.css','./app.js','./manifest.webmanifest','./data/corpus.json','./data/reading-network.json'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('gita-source-atlas-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
