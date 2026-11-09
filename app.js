@@ -31,12 +31,12 @@ function renderMap(){const svg=$('#constellation');if(!svg)return;const cx=450,c
  }
  svg.innerHTML=h;svg.querySelectorAll('.chapter-node').forEach(n=>n.onclick=()=>{show('read');go(+n.dataset.ch,1)});svg.querySelectorAll('.verse-dot').forEach(n=>{n.style.cursor='pointer';n.onclick=()=>{go(+n.dataset.ch,+n.dataset.v);show('read')}});}
 function go(ch,v){selected={chapter:ch,verse:v};$('#chapterSelect').value=ch;renderVerse();}
-function show(id){document.querySelectorAll('.workspace').forEach(e=>e.classList.toggle('view-active',e.id===`view-${id}`));document.querySelectorAll('.nav-item').forEach(e=>e.classList.toggle('active',e.dataset.view===id));if(id==='map')renderMap();window.scrollTo({top:0,behavior:'smooth'});}
+function show(id){document.querySelectorAll('.workspace').forEach(e=>e.classList.toggle('view-active',e.id===`view-${id}`));document.querySelectorAll('.nav-item').forEach(e=>e.classList.toggle('active',e.dataset.view===id));if(id==='map')renderMap();if(id==='lab')renderLab();window.scrollTo({top:0,behavior:'smooth'});}
 function bookmarks(){try{return JSON.parse(localStorage.getItem('gita-bookmarks')||'[]')}catch{return[]}}
 function toggleBookmark(){const r=ref(selected.chapter,selected.verse),a=bookmarks();localStorage.setItem('gita-bookmarks',JSON.stringify(a.includes(r)?a.filter(x=>x!==r):[...a,r]));renderVerse();}
 function search(q){const out=$('#searchResults');q=q.trim();if(!q){out.innerHTML='';return}const m=q.match(/^(\d{1,2})\s*[.:/]\s*(\d{1,3})$/);if(m){const found=corpus.find(v=>v.chapter_number===+m[1]&&v.verse_number===+m[2]);out.innerHTML=found?`<button data-ch="${m[1]}" data-v="${m[2]}">Open chapter ${m[1]}, verse ${m[2]} →</button>`:'<p>That reference is not present in the loaded source data.</p>';out.querySelector('button')?.addEventListener('click',e=>{go(+e.currentTarget.dataset.ch,+e.currentTarget.dataset.v);show('read');$('#searchDialog').close()});return}const results=corpus.filter(v=>cleanText(v.text).includes(q)||String(v.transliteration||'').toLowerCase().includes(q.toLowerCase())).slice(0,12);out.innerHTML=results.map(v=>`<button data-ch="${v.chapter_number}" data-v="${v.verse_number}">${v.chapter_number}.${v.verse_number} · ${cleanText(v.text).slice(0,110)} →</button>`).join('')||'<p>No Sanskrit matches in the loaded source record.</p>';out.querySelectorAll('button').forEach(b=>b.onclick=()=>{go(+b.dataset.ch,+b.dataset.v);show('read');$('#searchDialog').close()});}
 async function loadCorpus(){try{let res=await fetch('data/corpus.json');if(!res.ok)throw new Error('local corpus unavailable');const payload=await res.json();corpus=payload.verses||payload;}catch{try{const u='https://raw.githubusercontent.com/gita/gita/main/data/verse.json';const r=await fetch(u);if(!r.ok)throw new Error();corpus=await r.json();}catch{corpus=[]}}
- if(corpus.length){$('#corpusStatus').textContent=`${corpus.length} source records available`;$('#verseCount').textContent='700';}else $('#corpusStatus').textContent='Sample reading · corpus unavailable offline';
+ if(corpus.length){$('#corpusStatus').textContent=`${corpus.length} source records available`;$('#verseCount').textContent=corpus.length;document.querySelector('.stats p').textContent='This preserved source snapshot contains 701 numbered records. Chapter 13 has an additional separately numbered question; editions differ in how they count it.';}else $('#corpusStatus').textContent='Sample reading · corpus unavailable offline';
  populateChapters();const bookmark=localStorage.getItem('gita-last-reference');if(bookmark){const [c,v]=bookmark.split('.').map(Number);if(c&&v)selected={chapter:c,verse:v}}if(!verse()){const initial=corpus.find(v=>v.chapter_number===2&&v.verse_number===47);if(initial)selected={chapter:2,verse:47};else if(corpus[0])selected={chapter:corpus[0].chapter_number,verse:corpus[0].verse_number};}
  renderVerse();
 }
@@ -46,6 +46,37 @@ $('#continueBtn').onclick=()=>{show('read');go(2,47)};$('#copyVerse').onclick=as
 $('#journal').addEventListener('input',e=>localStorage.setItem(`gita-note-${ref(selected.chapter,selected.verse)}`,e.target.value));$('#journal').addEventListener('blur',()=>localStorage.setItem('gita-last-reference',ref(selected.chapter,selected.verse)));
 $('#listenVerse').onclick=()=>{show('listen');$('#audioHeading').scrollIntoView({behavior:'smooth',block:'center'})};$('#speakBtn').onclick=()=>{if(!('speechSynthesis'in window)){alert('Speech synthesis is not available in this browser.');return}speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(cleanText(verse()?.text||'')))};
 $('#searchOpen').onclick=()=>{$('#searchDialog').showModal();$('#searchInput').focus()};$('#searchInput').oninput=e=>search(e.target.value);document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();$('#searchDialog').showModal();$('#searchInput').focus()}});
-loadCorpus();
+
+let readingNetwork=null;
+const chapterColors=['#d7b36a','#99b995','#9cb4cc','#c59dd0','#e5a789','#e1c889','#8fbcb8','#d49d9d','#b2a4d6','#d4ad76','#b4c49b','#dcaa8e','#a8b9cf','#d6c29a','#aaa0ce','#8db5a8','#d0a9b9','#d7b36a'];
+async function loadReadingNetwork(){if(readingNetwork)return readingNetwork;try{const r=await fetch('data/reading-network.json');if(!r.ok)throw Error('not found');readingNetwork=await r.json()}catch{readingNetwork={themes:[]}}return readingNetwork}
+function renderLab(){
+ if(!corpus.length)return;
+ const counts=Array.from({length:18},(_,i)=>corpus.filter(v=>v.chapter_number===i+1).length),max=Math.max(...counts);
+ $('#chapterBars').innerHTML=counts.map((n,i)=>`<button class="bar-row" data-ch="${i+1}" title="Open chapter ${i+1}: ${n} source records"><span>Ch ${String(i+1).padStart(2,'0')}</span><i><b style="width:${Math.round(n/max*100)}%;background:${chapterColors[i%chapterColors.length]}"></b></i><strong>${n}</strong></button>`).join('');
+ $('#chapterBars').querySelectorAll('button').forEach(b=>b.onclick=()=>{show('read');go(+b.dataset.ch,1)});
+ const freq=new Map();for(const v of corpus){for(const m of (v.word_meanings||'').split(/[;\n]+/)){const term=m.split(/[-—:]/)[0].trim().toLowerCase();if(term.length>2&&!/^(the|and|for|from|into|that|this|with|which|who|what|when|where|there|their|your|you|him|her|his|its|not|are|was|has|have|all|one|any|only|also|such)$/.test(term))freq.set(term,(freq.get(term)||0)+1)}}}
+ $('#termCloud').innerHTML=[...freq].sort((a,b)=>b[1]-a[1]).slice(0,24).map(([term,n])=>`<button class="term-chip" data-term="${term.replace(/"/g,'&quot;')}" title="${n} source gloss entries">${term}<small>${n}</small></button>`).join('');
+ $('#termCloud').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('#labSearch').value=b.dataset.term;$('#labField').value='gloss';searchLab()});
+ renderNetwork();
+}
+function searchLab(){
+ const q=$('#labSearch').value.trim().toLocaleLowerCase(),field=$('#labField').value,out=$('#labResults');if(q.length<2){out.innerHTML='';return}
+ const matching=corpus.filter(v=>{const fields=field==='sanskrit'?[v.text]:field==='transliteration'?[v.transliteration]:field==='gloss'?[v.word_meanings]:[v.text,v.transliteration,v.word_meanings];return fields.some(x=>String(x||'').toLocaleLowerCase().includes(q))}).slice(0,30);
+ out.innerHTML=matching.length?matching.map(v=>`<button class="lab-result" data-ch="${v.chapter_number}" data-v="${v.verse_number}"><strong>${v.chapter_number}.${v.verse_number}</strong><span>${cleanText(v.text).slice(0,95)}</span><small>${String(v.transliteration||'').replace(/\n/g,' ').slice(0,85)}</small></button>`).join(''):'<p>No matches in the selected fields of the preserved corpus.</p>';
+ out.querySelectorAll('button').forEach(b=>b.onclick=()=>{show('read');go(+b.dataset.ch,+b.dataset.v)});
+}
+async function renderNetwork(){
+ const {themes=[]}=await loadReadingNetwork(),svg=$('#readingNetwork');if(!svg)return;const cx=500,cy=310,R=218,rx=140,ry=36;let out='';
+ for(let i=0;i<themes.length;i++){const t=themes[i],a=-Math.PI/2+i*2*Math.PI/themes.length,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);
+  for(let j=0;j<t.refs.length;j++){const ar=a+Math.PI+(j-(t.refs.length-1)/2)*.17,vx=x+rx*Math.cos(ar),vy=y+ry*Math.sin(ar);out+=`<line class="network-edge" x1="${x}" y1="${y}" x2="${vx}" y2="${vy}" stroke="${t.color}"/><g class="network-verse" data-ref="${t.refs[j]}"><circle cx="${vx}" cy="${vy}" r="16"/><text x="${vx}" y="${vy+3}">${t.refs[j]}</text></g>`}
+  out+=`<g class="network-theme" data-theme="${t.id}"><circle cx="${x}" cy="${y}" r="31" fill="${t.color}"/><text x="${x}" y="${y+48}">${t.label}</text></g>`;
+ }
+ svg.innerHTML=out;
+ svg.querySelectorAll('.network-verse').forEach(n=>n.onclick=()=>{const [c,v]=n.dataset.ref.split('.').map(Number);go(c,v);show('read')});
+ svg.querySelectorAll('.network-theme').forEach(n=>n.onclick=()=>{const t=themes.find(x=>x.id===n.dataset.theme);$('#networkDetail').innerHTML=`<strong>${t.label}</strong><span> · Curated reading path · </span>`+t.refs.map(ref=>`<button class="network-ref" data-ref="${ref}">${ref} →</button>`).join('');$('#networkDetail').querySelectorAll('button').forEach(b=>b.onclick=()=>{const [c,v]=b.dataset.ref.split('.').map(Number);go(c,v);show('read')})});
+}
+$('#labSearch')?.addEventListener('input',searchLab);$('#labField')?.addEventListener('change',searchLab);
+\nloadCorpus();
 if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
 
