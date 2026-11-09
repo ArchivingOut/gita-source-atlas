@@ -21,7 +21,10 @@
 - **Internet Archive Gītā recitation search** — https://archive.org/search?query=Bhagavad%20Gita%20recitation — results vary; verify the item-level creator, rights, and recording metadata.
 - **Holy Bhagavad Gita verse pages** — https://www.holy-bhagavad-gita.org/chapter/2/verse/47/en/ — per-verse source page linked for hosted recitation access. Audio remains at the host.
 
-- **Vedic Scriptures Bhagavad Gita API and translations dataset** — [API](https://vedicscriptures.github.io/) and [dataset repository](https://github.com/vedicscriptures/bhagavad-gita). English renderings and source commentary are requested per verse at display time and shown with the API-provided author name; the archive does not bundle those translations. Availability and textual coverage vary by author and verse. The upstream dataset repository declares GPL-3.0, but individual translation rights and provenance may differ; verify with the source steward before reuse or redistribution.\n- **Holy Bhagavad Gita audio** — the reader streams the chapter/verse MP3 URL from the host and provides its verse page as fallback. Audio is third-party, requires internet, and is not included in the offline archive.\n\n## Manuscript and catalogue discovery
+- **Vedic Scriptures Bhagavad Gita API and translations dataset** — [API](https://vedicscriptures.github.io/) and [dataset repository](https://github.com/vedicscriptures/bhagavad-gita). English renderings and source commentary are requested per verse at display time and shown with the API-provided author name; the archive does not bundle those translations. Availability and textual coverage vary by author and verse. The upstream dataset repository declares GPL-3.0, but individual translation rights and provenance may differ; verify with the source steward before reuse or redistribution.
+- **Holy Bhagavad Gita audio** — the reader streams the chapter/verse MP3 URL from the host and provides its verse page as fallback. Audio is third-party, requires internet, and is not included in the offline archive.
+
+## Manuscript and catalogue discovery
 
 These are research gateways or catalogue-level finding aids, not claims that this project has inspected or digitized every Gītā witness:
 
