@@ -8,7 +8,8 @@ const ref = (c,v)=>`${c}.${v}`;
 const rows = ()=>corpus.filter(x=>x.chapter_number===selected.chapter).sort((a,b)=>a.verse_number-b.verse_number);
 function verse(){return corpus.find(x=>x.chapter_number===selected.chapter&&x.verse_number===selected.verse);}
 function sourceUrl(){return 'https://github.com/gita/gita/blob/main/data/verse.json';}
-const translationCache = new Map();\nconst commentaryCache = new Map();
+const translationCache = new Map();
+const commentaryCache = new Map();
 const translationNames = {siva:'Swami Sivananda',gambir:'Swami Gambirananda',purohit:'Purohit Swami',san:'S. Sankaranarayan',adi:'Swami Adidevananda',raman:'Sri Ramanuja',sankar:'Sri Shankaracharya'};
 async function loadEnglishTranslation(){
  const key=ref(selected.chapter,selected.verse), author=$('#translationSelect')?.value||'siva', cacheKey=key+':'+author;
