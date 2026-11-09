@@ -2,7 +2,7 @@
 
 **A source-first reading room for the Bhagavad Gītā.** Read the open Sanskrit corpus verse by verse, navigate the 18-chapter conversation, open commentary and edition portals, listen through attributed source links, and keep private notes on your own device.
 
-**Live site:** after the first successful GitHub Pages deployment, open `https://archivingout.github.io/gita-source-atlas/`.
+**Live site:** [archivingout.github.io/gita-source-atlas](https://archivingout.github.io/gita-source-atlas/).
 
 ## What is here
 
