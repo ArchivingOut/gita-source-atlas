@@ -11,22 +11,32 @@ function sourceUrl(){return 'https://github.com/gita/gita/blob/main/data/verse.j
 const translationCache = new Map();
 const translationNames = {siva:'Swami Sivananda',gambir:'Swami Gambirananda',purohit:'Purohit Swami',san:'S. Sankaranarayan',adi:'Swami Adidevananda',raman:'Sri Ramanuja',sankar:'Sri Shankaracharya'};
 async function loadEnglishTranslation(){
- const key=ref(selected.chapter,selected.verse), author=$('#translationSelect')?.value||'siva', cacheKey=key+':'+author;const requestKey=key, requestAuthor=author;
+ const key=ref(selected.chapter,selected.verse), author=$('#translationSelect')?.value||'siva', cacheKey=key+':'+author;
  const target=$('#englishTranslation'), credit=$('#translationAuthor');
  if(!target||!credit)return;
- if(translationCache.has(cacheKey)){const t=translationCache.get(cacheKey);target.textContent=t.text;credit.textContent=t.author;return}
+ const cached=translationCache.get(cacheKey);
+ if(cached){target.textContent=cached.text;credit.textContent=cached.author+' · Vedic Scriptures source';$('#commentaryText').textContent=cached.commentary||'No commentary field is available in this source record for this author.';$('#commentaryAuthor').textContent=cached.commentaryLabel||'No commentary supplied';return}
+ const requestKey=key, requestAuthor=author, chapter=selected.chapter, verseNumber=selected.verse;
  target.textContent='Loading the selected translator’s rendering…';credit.textContent=(translationNames[author]||author)+' · live source';
  try{
-  const response=await fetch('https://vedicscriptures.github.io/slok/'+selected.chapter+'/'+selected.verse);
+  const response=await fetch('https://vedicscriptures.github.io/slok/'+chapter+'/'+verseNumber);
   if(!response.ok)throw Error('Translation service unavailable');
-  const data=await response.json(), entry=data[author]||data[({sankaran:'sank'})[author]]||null;
-  const text=entry&&(entry.et||entry.translation||entry.en);
+  const data=await response.json(), entry=data[author]||null, text=entry&&(entry.et||entry.translation||entry.en);
   if(!text)throw Error('This translator has no English rendering for this verse in the source API');
-  const t={text:String(text).trim(),author:entry.author||translationNames[author]||author};
-  translationCache.set(cacheKey,t);target.textContent=t.text;credit.textContent=t.author+' · Vedic Scriptures source';\n  const note=entry.ec||entry.sc||entry.hc;const noteNode=$('#commentaryText'),noteCredit=$('#commentaryAuthor');if(noteNode&&noteCredit){noteNode.textContent=note||'No commentary field is available in this source record for this author.';noteCredit.textContent=note?(entry.ec?'English source commentary':entry.sc?'Sanskrit source commentary':'Hindi source commentary')+' · '+t.author:'No commentary supplied';}
+  if(requestKey!==ref(selected.chapter,selected.verse)||requestAuthor!==($('#translationSelect')?.value||'siva'))return;
+  const authorName=entry.author||translationNames[author]||author;
+  const note=entry.ec||entry.sc||entry.hc||'';
+  const noteLabel=note?(entry.ec?'English source commentary':entry.sc?'Sanskrit source commentary':'Hindi source commentary')+' · '+authorName:'No commentary supplied';
+  const item={text:String(text).trim(),author:authorName,commentary:note,commentaryLabel:noteLabel};
+  translationCache.set(cacheKey,item);target.textContent=item.text;credit.textContent=item.author+' · Vedic Scriptures source';
+  $('#commentaryText').textContent=note||'No commentary field is available in this source record for this author.';
+  $('#commentaryAuthor').textContent=noteLabel;
  }catch(error){
+  if(requestKey!==ref(selected.chapter,selected.verse)||requestAuthor!==($('#translationSelect')?.value||'siva'))return;
   target.textContent='This English rendering could not be loaded. The complete Sanskrit and transliteration remain available above. Retry by choosing this verse again, or compare editions at the linked Gītā Supersite.';
   credit.textContent=(translationNames[author]||author)+' · source unavailable';
+  $('#commentaryText').textContent='Commentary could not be loaded from the source. Open the linked Gītā Supersite to compare this verse.';
+  $('#commentaryAuthor').textContent='Source unavailable';
  }
 }
 function renderVerse(){
