@@ -7,7 +7,7 @@
 ## Archive in this release
 
 - A committed, dated snapshot of the full upstream Sanskrit transcription: **701 source-numbered verse records across all 18 chapters**, with source transliteration and word glosses.
-- Verse-by-verse reading across all 701 preserved records; chapter and verse navigation; source Sanskrit, transliteration and glosses; English translator editions and source commentary loaded on demand; verse audio streamed from the hosting source; private local notes, bookmarks, copy and browser speech. The external English and audio services require internet.
+- Verse-by-verse reading across all 701 preserved records; chapter and verse navigation; source Sanskrit, transliteration and glosses; selectable English editions and 20 commentary records loaded on demand; hosted verse audio; private local notes, bookmarks, copy and browser speech. The external English, commentary and audio services require internet. Availability varies by author and verse.
 - A full-corpus research desk: exact-string concordance, chapter-level source-record profile, source dictionary-headword frequency, and a thematic verse network with navigable references.
 - Source links to comparative readings, classical commentary traditions, recitations, Sanskrit linguistic resources, and manuscript catalogues.
 - A published source/rights register and an editorial note distinguishing source numbering from the commonly cited 700-verse arrangement.
