@@ -1,35 +1,18 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 
-const repo = 'https://raw.githubusercontent.com/gita/gita/main/data';
-const sources = {
-  verses: `${repo}/verse.json`,
-  chapters: `${repo}/chapters.json`,
-};
-const [verseResponse, chapterResponse] = await Promise.all(Object.values(sources).map((url) => fetch(url)));
-if (!verseResponse.ok || !chapterResponse.ok) throw new Error('Could not retrieve the upstream Gita Initiative data.');
-const [verses, sourceChapters] = await Promise.all([verseResponse.json(), chapterResponse.json()]);
-if (!Array.isArray(verses) || verses.length < 700) throw new Error(`Expected at least 700 verse records; received ${verses?.length ?? 'invalid data'}.`);
+const corpus = JSON.parse(await readFile('data/corpus.json', 'utf8'));
+if (!Array.isArray(corpus.verses) || corpus.verses.length !== 701) throw new Error('Expected the preserved 701-record corpus snapshot.');
+if (!Array.isArray(corpus.chapterMetadata) || corpus.chapterMetadata.length !== 18) throw new Error('Expected metadata for all 18 chapters.');
 const refs = new Set();
-for (const v of verses) {
-  if (!Number.isInteger(v.chapter_number) || v.chapter_number < 1 || v.chapter_number > 18 || !Number.isInteger(v.verse_number) || typeof v.text !== 'string' || !v.text.trim()) throw new Error(`Invalid verse record: ${JSON.stringify(v).slice(0,160)}`);
-  const key = `${v.chapter_number}.${v.verse_number}`;
-  if (refs.has(key)) throw new Error(`Duplicate chapter/verse reference: ${key}`);
-  refs.add(key);
+for (const verse of corpus.verses) {
+  if (!Number.isInteger(verse.chapter_number) || verse.chapter_number < 1 || verse.chapter_number > 18 ||
+      !Number.isInteger(verse.verse_number) || typeof verse.text !== 'string' || !verse.text.trim()) {
+    throw new Error(`Invalid source record: ${JSON.stringify(verse).slice(0, 160)}`);
+  }
+  const ref = `${verse.chapter_number}.${verse.verse_number}`;
+  if (refs.has(ref)) throw new Error(`Duplicate source reference: ${ref}`);
+  refs.add(ref);
 }
-const chapterCounts = Array.from({length:18},(_,i)=>verses.filter(v=>v.chapter_number===i+1).length);
-const payload = {
-  archive: 'Gītā Source Atlas',
-  dataset: 'gita/gita',
-  license: 'Unlicense (upstream data repository; see source LICENSE)',
-  retrievedAt: new Date().toISOString(),
-  recordCount: verses.length,
-  note: 'The source dataset has its own verse segmentation and numbering. Its extra record in the 13th chapter corresponds to a numbering witness found in some editions. The commonly cited 700-verse arrangement handles this verse differently. This archive preserves upstream records without silently normalizing them into a critical edition.',
-  sources,
-  chapterCounts,
-  sourceChapters,
-  verses,
-};
-await mkdir('data',{recursive:true});
-await writeFile('data/corpus.json', JSON.stringify(payload));
-console.log(`Archived ${verses.length} source verse records across ${chapterCounts.length} chapters (${chapterCounts.join(', ')}).`);
-
+const counts = Array.from({ length: 18 }, (_, i) => corpus.verses.filter(v => v.chapter_number === i + 1).length);
+if (JSON.stringify(counts) !== JSON.stringify(corpus.chapterCounts)) throw new Error('Stored chapter counts do not match source records.');
+console.log(`Validated archived snapshot ${corpus.snapshotDate}: ${corpus.verses.length} records in 18 chapters.`);
