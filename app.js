@@ -7,13 +7,14 @@ const cleanText = (s='') => s.replace(/\s*\|\|\s*\d+\.\d+\|\|\s*/g,'').replace(/
 const ref = (c,v)=>`${c}.${v}`;
 const rows = ()=>corpus.filter(x=>x.chapter_number===selected.chapter).sort((a,b)=>a.verse_number-b.verse_number);
 function verse(){return corpus.find(x=>x.chapter_number===selected.chapter&&x.verse_number===selected.verse);}
-function sourceUrl(v){return `https://github.com/gita/gita/blob/main/data/verse.json#L${v?.verse_order||1}`;}
+function sourceUrl(){return 'https://github.com/gita/gita/blob/main/data/verse.json';}
 function renderVerse(){
  const v=verse(); $('#verseRef').textContent=`CHAPTER ${selected.chapter} · VERSE ${selected.verse}`;
  if(v){$('#sanskrit').innerHTML=cleanText(v.text).split(/\n+/).filter(Boolean).map(s=>`<span>${s}</span>`).join('<br>');$('#transliteration').textContent=(v.transliteration||'').trim();$('#wordMeanings').textContent=(v.word_meanings||'Not supplied in the primary dataset.').replace(/\n/g,' ').trim();$('#sourceVerse').href=sourceUrl(v);}
  else {$('#sanskrit').textContent='The selected verse is not in the locally available source record.';$('#transliteration').textContent='';$('#wordMeanings').textContent='Load the archive corpus from the project’s source manifest.';}
  $('#journal').value=localStorage.getItem(`gita-note-${ref(selected.chapter,selected.verse)}`)||'';
  const audio=`https://www.holy-bhagavad-gita.org/media/audios/${String(selected.chapter).padStart(3,'0')}_${String(selected.verse).padStart(3,'0')}.mp3`;
+ const comparison=`https://heritage.iitk.ac.in/SBG/${selected.chapter}.${selected.verse}`;$('#compareVerse').href=comparison;$('#compareTradition').href=comparison;
  $('#holyAudio').href=audio;$('#audioLink').href=audio;$('#audioHeading').textContent=`Bhagavad Gītā · ${ref(selected.chapter,selected.verse)}`;
  $('#verseBookmark').innerHTML=(bookmarks().includes(ref(selected.chapter,selected.verse))?'★':'☆')+' <span>Save</span>';
  $('#bookmarkTop').textContent=bookmarks().includes(ref(selected.chapter,selected.verse))?'★':'☆';
