@@ -18,7 +18,7 @@ This project is a reading interface and provenance index. It does not present it
 
 ## Audio
 
-- Per-verse audio links point to `holy-bhagavad-gita.org`. Recordings are streamed/opened from that service and are not copied into this repository. Links may change and users should follow host attribution and terms.
+- Per-verse audio players point to `holy-bhagavad-gita.org`. Recordings are streamed from that service and are not copied into this repository. Links may change and users should follow host attribution and terms.
 - The Listen page links to Internet Archive search for Gītā recitations. Search results are not an endorsement or a blanket rights grant; each item has its own metadata and license.
 - Browser speech synthesis is generated on-device from the selected Sanskrit string. Pronunciation depends on the browser and installed voice.
 
