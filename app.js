@@ -47,7 +47,8 @@ function renderVerse(){
  loadEnglishTranslation();
  const audio=`https://www.holy-bhagavad-gita.org/chapter/${selected.chapter}/verse/${selected.verse}/en/`;
  const comparison=`https://heritage.iitk.ac.in/SBG/${selected.chapter}.${selected.verse}`;$('#compareVerse').href=comparison;$('#compareTradition').href=comparison;
- $('#holyAudio').href=audio;$('#audioLink').href=audio;$('#audioHeading').textContent=`Bhagavad Gītā · ${ref(selected.chapter,selected.verse)}`;\n const audioFile='https://www.holy-bhagavad-gita.org/media/audios/'+String(selected.chapter).padStart(3,'0')+'_'+String(selected.verse).padStart(3,'0')+'.mp3';const player=$('#verseAudio');if(player){player.pause();player.src=audioFile;player.load();player.onerror=()=>{$('#audioStatus').textContent='This recording is unavailable at the host. Open the cited verse page for current recitation options.'};player.oncanplay=()=>{$('#audioStatus').textContent='Ready to play · hosted by Holy Bhagavad Gita · not stored in this archive.'}}
+ $('#holyAudio').href=audio;$('#audioLink').href=audio;$('#audioHeading').textContent=`Bhagavad Gītā · ${ref(selected.chapter,selected.verse)}`;
+ const audioFile='https://www.holy-bhagavad-gita.org/media/audios/'+String(selected.chapter).padStart(3,'0')+'_'+String(selected.verse).padStart(3,'0')+'.mp3';const player=$('#verseAudio');if(player){player.pause();player.src=audioFile;player.load();player.onerror=()=>{$('#audioStatus').textContent='This recording is unavailable at the host. Open the cited verse page for current recitation options.'};player.oncanplay=()=>{$('#audioStatus').textContent='Ready to play · hosted by Holy Bhagavad Gita · not stored in this archive.'}}
  $('#verseBookmark').innerHTML=(bookmarks().includes(ref(selected.chapter,selected.verse))?'★':'☆')+' <span>Save</span>';
  $('#bookmarkTop').textContent=bookmarks().includes(ref(selected.chapter,selected.verse))?'★':'☆';
  renderVerseList(); renderMap();
