@@ -55,7 +55,7 @@ function renderLab(){
  const counts=Array.from({length:18},(_,i)=>corpus.filter(v=>v.chapter_number===i+1).length),max=Math.max(...counts);
  $('#chapterBars').innerHTML=counts.map((n,i)=>`<button class="bar-row" data-ch="${i+1}" title="Open chapter ${i+1}: ${n} source records"><span>Ch ${String(i+1).padStart(2,'0')}</span><i><b style="width:${Math.round(n/max*100)}%;background:${chapterColors[i%chapterColors.length]}"></b></i><strong>${n}</strong></button>`).join('');
  $('#chapterBars').querySelectorAll('button').forEach(b=>b.onclick=()=>{show('read');go(+b.dataset.ch,1)});
- const freq=new Map();for(const v of corpus){for(const m of (v.word_meanings||'').split(/[;\n]+/)){const term=m.split(/[-—:]/)[0].trim().toLowerCase();if(term.length>2&&!/^(the|and|for|from|into|that|this|with|which|who|what|when|where|there|their|your|you|him|her|his|its|not|are|was|has|have|all|one|any|only|also|such)$/.test(term))freq.set(term,(freq.get(term)||0)+1)}}}
+ const freq=new Map();for(const v of corpus){for(const m of (v.word_meanings||'').split(/[;\n]+/)){const term=m.split(/[-—:]/)[0].trim().toLowerCase();if(term.length>2&&!/^(the|and|for|from|into|that|this|with|which|who|what|when|where|there|their|your|you|him|her|his|its|not|are|was|has|have|all|one|any|only|also|such)$/.test(term))freq.set(term,(freq.get(term)||0)+1)}}
  $('#termCloud').innerHTML=[...freq].sort((a,b)=>b[1]-a[1]).slice(0,24).map(([term,n])=>`<button class="term-chip" data-term="${term.replace(/"/g,'&quot;')}" title="${n} source gloss entries">${term}<small>${n}</small></button>`).join('');
  $('#termCloud').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('#labSearch').value=b.dataset.term;$('#labField').value='gloss';searchLab()});
  renderNetwork();
@@ -77,6 +77,6 @@ async function renderNetwork(){
  svg.querySelectorAll('.network-theme').forEach(n=>n.onclick=()=>{const t=themes.find(x=>x.id===n.dataset.theme);$('#networkDetail').innerHTML=`<strong>${t.label}</strong><span> · Curated reading path · </span>`+t.refs.map(ref=>`<button class="network-ref" data-ref="${ref}">${ref} →</button>`).join('');$('#networkDetail').querySelectorAll('button').forEach(b=>b.onclick=()=>{const [c,v]=b.dataset.ref.split('.').map(Number);go(c,v);show('read')})});
 }
 $('#labSearch')?.addEventListener('input',searchLab);$('#labField')?.addEventListener('change',searchLab);
-\nloadCorpus();
+loadCorpus();
 if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
 
