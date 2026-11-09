@@ -65,3 +65,15 @@
 .situation-row button:hover{border-color:#b69a5c;color:#ead8ae}
 .situation-row small{flex-basis:100%;font:9px var(--sans);color:#707d71;margin-left:2px}
 @media(max-width:720px){.home-discover{padding:26px 0}.discover-intro{display:block}.discover-intro h2{font-size:26px}.discover-intro>p{margin-top:8px}.discover-grid{grid-template-columns:1fr}.discover-card{min-height:148px}.situation-row>span{flex-basis:100%}}
+
+.commentary-panel{margin-top:17px;border:1px solid #3a4439;border-radius:4px;background:#151d17}
+.commentary-panel summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;cursor:pointer;list-style:none;font:12px var(--serif);color:#e4e1d5}
+.commentary-panel summary::-webkit-details-marker{display:none}.commentary-panel summary:after{content:'+';color:#d7b36a;font:17px var(--sans)}.commentary-panel[open] summary:after{content:'−'}
+.commentary-panel summary small{font:9px var(--mono);color:#9a9f8e}
+.commentary-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:0 15px 12px;border-bottom:1px solid #303a31}
+.commentary-controls label{font:8px var(--mono);color:#879384}
+#commentarySelect{max-width:min(100%,360px);background:#111814;color:#e5e0d3;border:1px solid #414b40;border-radius:3px;padding:8px;font:10px var(--sans)}
+.commentary-controls small{font:9px var(--mono);color:#b7bda9}
+.commentary-text{max-height:420px;overflow:auto;white-space:pre-wrap;padding:16px 17px;font:13px/1.75 var(--serif);color:#c7cbbf}
+.commentary-credit{margin:0;padding:0 17px 13px;font:9px/1.5 var(--sans);color:#788477}
+@media(max-width:520px){.commentary-panel summary{align-items:flex-start}.commentary-panel summary small{max-width:45%;text-align:right}.commentary-controls{align-items:flex-start;flex-direction:column}}
