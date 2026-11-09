@@ -9,7 +9,7 @@
 - Sanskrit verse text, transliteration and word meanings from [The Gita Initiative](https://github.com/gita/gita), retrieved and validated by the Pages workflow.
 - Verse navigator, chapter selector, Sanskrit search, reading progress, copy, previous/next controls and a chapter constellation map.
 - Links to the [IIT Kanpur Gītā Supersite](https://heritage.iitk.ac.in/gitasupersite) and the open dataset, without copying modern copyrighted commentaries or translations.
-- Per-verse recording links and browser speech synthesis. Audio is streamed from its host rather than rehosted.
+- Per-verse inline audio streaming and browser speech synthesis. Audio is streamed from its host rather than rehosted.
 - Local-only verse bookmarks and notes using browser storage. These are not uploaded or synced.
 - Offline-ready shell and cached corpus after the first successful site load.
 
