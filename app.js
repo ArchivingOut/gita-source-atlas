@@ -8,14 +8,14 @@ const ref = (c,v)=>`${c}.${v}`;
 const rows = ()=>corpus.filter(x=>x.chapter_number===selected.chapter).sort((a,b)=>a.verse_number-b.verse_number);
 function verse(){return corpus.find(x=>x.chapter_number===selected.chapter&&x.verse_number===selected.verse);}
 function sourceUrl(){return 'https://github.com/gita/gita/blob/main/data/verse.json';}
-const translationCache = new Map();
+const translationCache = new Map();\nconst commentaryCache = new Map();
 const translationNames = {siva:'Swami Sivananda',gambir:'Swami Gambirananda',purohit:'Purohit Swami',san:'S. Sankaranarayan',adi:'Swami Adidevananda',raman:'Sri Ramanuja',sankar:'Sri Shankaracharya'};
 async function loadEnglishTranslation(){
  const key=ref(selected.chapter,selected.verse), author=$('#translationSelect')?.value||'siva', cacheKey=key+':'+author;
  const target=$('#englishTranslation'), credit=$('#translationAuthor');
  if(!target||!credit)return;
  const cached=translationCache.get(cacheKey);
- if(cached){target.textContent=cached.text;credit.textContent=cached.author+' · Vedic Scriptures source';$('#commentaryText').textContent=cached.commentary||'No commentary field is available in this source record for this author.';$('#commentaryAuthor').textContent=cached.commentaryLabel||'No commentary supplied';return}
+ if(cached){target.textContent=cached.text;credit.textContent=cached.author+' · Vedic Scriptures source';return}
  const requestKey=key, requestAuthor=author, chapter=selected.chapter, verseNumber=selected.verse;
  target.textContent='Loading the selected translator’s rendering…';credit.textContent=(translationNames[author]||author)+' · live source';
  try{
@@ -39,12 +39,33 @@ async function loadEnglishTranslation(){
   $('#commentaryAuthor').textContent='Source unavailable';
  }
 }
+const commentaryNames={siva:'Swami Sivananda',gambir:'Swami Gambirananda',san:'S. Sankaranarayan',adi:'Swami Adidevananda',purohit:'Purohit Swami',raman:'Sri Ramanuja',sankar:'Sri Shankaracharya',abhinav:'Sri Abhinavagupta',madhav:'Sri Madhavacharya',anand:'Sri Anandgiri',dhan:'Sri Dhanpati',neel:'Sri Neelkanth',srid:'Sri Sridhara Swami',venkat:'Vedantadeshikacharya Venkatanatha',jaya:'Sri Jayatritha',ms:'Sri Madhusudan Saraswati',puru:'Sri Purushottamji',vallabh:'Sri Vallabhacharya',rams:'Swami Ramsukhdas',chinmay:'Swami Chinmayananda'};
+const commentaryTextCache=new Map();
+async function loadCommentary(){
+ const select=$('#commentarySelect'),out=$('#commentaryText'),credit=$('#commentaryAuthor');if(!select||!out||!credit)return;
+ const key=ref(selected.chapter,selected.verse),author=select.value||'siva',cacheKey=key+':'+author,requestKey=key,chapter=selected.chapter,verseNumber=selected.verse;
+ const cached=commentaryTextCache.get(cacheKey);if(cached){out.textContent=cached.text;credit.textContent=cached.credit;return}
+ out.textContent='Loading this verse’s commentary from the source…';credit.textContent=(commentaryNames[author]||author)+' · live source';
+ try{
+  const response=await fetch('https://vedicscriptures.github.io/slok/'+chapter+'/'+verseNumber);if(!response.ok)throw Error('Source unavailable');
+  const data=await response.json(),entry=data[author]||{},text=entry.ec||entry.sc||entry.hc||'';
+  if(requestKey!==ref(selected.chapter,selected.verse)||author!==($('#commentarySelect')?.value||'siva'))return;
+  const language=entry.ec?'English commentary':entry.sc?'Sanskrit commentary':entry.hc?'Hindi commentary':'No commentary supplied';
+  const value=text?String(text).trim():'No commentary is supplied for this author and verse in the API record. Use the source portals to compare another edition.';
+  const item={text:value,credit:(entry.author||commentaryNames[author]||author)+' · '+language+' · Vedic Scriptures source'};
+  commentaryTextCache.set(cacheKey,item);out.textContent=item.text;credit.textContent=item.credit;
+ }catch(error){
+  if(requestKey!==ref(selected.chapter,selected.verse)||author!==($('#commentarySelect')?.value||'siva'))return;
+  out.textContent='Commentary could not be loaded. The Sanskrit text remains available above; compare this verse in the linked Gītā Supersite.';
+  credit.textContent=(commentaryNames[author]||author)+' · source unavailable';
+ }
+}
 function renderVerse(){
  const v=verse(); $('#verseRef').textContent=`CHAPTER ${selected.chapter} · VERSE ${selected.verse}`;
  if(v){$('#sanskrit').innerHTML=cleanText(v.text).split(/\n+/).filter(Boolean).map(s=>`<span>${s}</span>`).join('<br>');$('#transliteration').textContent=(v.transliteration||'').trim();$('#wordMeanings').textContent=(v.word_meanings||'Not supplied in the primary dataset.').replace(/\n/g,' ').trim();$('#sourceVerse').href=sourceUrl(v);}
  else {$('#sanskrit').textContent='The selected verse is not in the locally available source record.';$('#transliteration').textContent='';$('#wordMeanings').textContent='Load the archive corpus from the project’s source manifest.';}
  $('#journal').value=localStorage.getItem(`gita-note-${ref(selected.chapter,selected.verse)}`)||'';
- loadEnglishTranslation();
+ loadEnglishTranslation();loadCommentary();
  const audio=`https://www.holy-bhagavad-gita.org/chapter/${selected.chapter}/verse/${selected.verse}/en/`;
  const comparison=`https://heritage.iitk.ac.in/SBG/${selected.chapter}.${selected.verse}`;$('#compareVerse').href=comparison;$('#compareTradition').href=comparison;
  $('#holyAudio').href=audio;$('#audioLink').href=audio;$('#audioHeading').textContent=`Bhagavad Gītā · ${ref(selected.chapter,selected.verse)}`;
@@ -90,7 +111,7 @@ document.querySelectorAll('.nav-item').forEach(b=>b.onclick=()=>show(b.dataset.v
 $('#chapterSelect').onchange=e=>go(+e.target.value,1);$('#prevVerse').onclick=()=>{let a=rows(),i=a.findIndex(v=>v.verse_number===selected.verse);if(i>0)go(selected.chapter,a[i-1].verse_number);else if(selected.chapter>1)go(selected.chapter-1,Math.max(...corpus.filter(v=>v.chapter_number===selected.chapter-1).map(v=>v.verse_number)))};$('#nextVerse').onclick=()=>{let a=rows(),i=a.findIndex(v=>v.verse_number===selected.verse);if(i<a.length-1)go(selected.chapter,a[i+1].verse_number);else if(selected.chapter<18)go(selected.chapter+1,1)};
 $('#continueBtn').onclick=()=>{show('read');go(2,47)};$('#copyVerse').onclick=async()=>{const v=verse();if(v)await navigator.clipboard?.writeText(cleanText(v.text));$('#copyVerse').innerHTML='✓ <span>Copied</span>';setTimeout(()=>$('#copyVerse').innerHTML='▢ <span>Copy Sanskrit</span>',1300)};$('#verseBookmark').onclick=toggleBookmark;$('#bookmarkTop').onclick=toggleBookmark;
 $('#journal').addEventListener('input',e=>localStorage.setItem(`gita-note-${ref(selected.chapter,selected.verse)}`,e.target.value));$('#journal').addEventListener('blur',()=>localStorage.setItem('gita-last-reference',ref(selected.chapter,selected.verse)));
-$('#listenVerse').onclick=()=>{show('listen');$('#audioHeading').scrollIntoView({behavior:'smooth',block:'center'})};$('#translationSelect')?.addEventListener('change',loadEnglishTranslation);
+$('#listenVerse').onclick=()=>{show('listen');$('#audioHeading').scrollIntoView({behavior:'smooth',block:'center'})};$('#translationSelect')?.addEventListener('change',loadEnglishTranslation);$('#commentarySelect')?.addEventListener('change',loadCommentary);
 $('#readEnglish')?.addEventListener('click',()=>{const text=$('#englishTranslation')?.textContent||'';if(!('speechSynthesis'in window)||!text||text.startsWith('Loading')||text.startsWith('This English'))return;speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(text);utterance.lang='en';speechSynthesis.speak(utterance)});
 $('#speakBtn').onclick=()=>{if(!('speechSynthesis'in window)){alert('Speech synthesis is not available in this browser.');return}speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance(cleanText(verse()?.text||'')))};
 $('#searchOpen').onclick=()=>{$('#searchDialog').showModal();$('#searchInput').focus()};$('#searchInput').oninput=e=>search(e.target.value);document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)){e.preventDefault();$('#searchDialog').showModal();$('#searchInput').focus()}});
