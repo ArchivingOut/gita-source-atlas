@@ -13,7 +13,7 @@ function renderVerse(){
  if(v){$('#sanskrit').innerHTML=cleanText(v.text).split(/\n+/).filter(Boolean).map(s=>`<span>${s}</span>`).join('<br>');$('#transliteration').textContent=(v.transliteration||'').trim();$('#wordMeanings').textContent=(v.word_meanings||'Not supplied in the primary dataset.').replace(/\n/g,' ').trim();$('#sourceVerse').href=sourceUrl(v);}
  else {$('#sanskrit').textContent='The selected verse is not in the locally available source record.';$('#transliteration').textContent='';$('#wordMeanings').textContent='Load the archive corpus from the project’s source manifest.';}
  $('#journal').value=localStorage.getItem(`gita-note-${ref(selected.chapter,selected.verse)}`)||'';
- const audio=`https://www.holy-bhagavad-gita.org/media/audios/${String(selected.chapter).padStart(3,'0')}_${String(selected.verse).padStart(3,'0')}.mp3`;
+ const audio=`https://www.holy-bhagavad-gita.org/media/audios/${String(selected.chapter).padStart(3,'0')}_${String(selected.verse).padStart(3,'0')}.mp3`;$('#audioPlayer').src=audio;
  const comparison=`https://heritage.iitk.ac.in/SBG/${selected.chapter}.${selected.verse}`;$('#compareVerse').href=comparison;$('#compareTradition').href=comparison;
  $('#holyAudio').href=audio;$('#audioLink').href=audio;$('#audioHeading').textContent=`Bhagavad Gītā · ${ref(selected.chapter,selected.verse)}`;
  $('#verseBookmark').innerHTML=(bookmarks().includes(ref(selected.chapter,selected.verse))?'★':'☆')+' <span>Save</span>';
