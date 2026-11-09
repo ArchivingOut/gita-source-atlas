@@ -9,9 +9,9 @@ const rows = ()=>corpus.filter(x=>x.chapter_number===selected.chapter).sort((a,b
 function verse(){return corpus.find(x=>x.chapter_number===selected.chapter&&x.verse_number===selected.verse);}
 function sourceUrl(){return 'https://github.com/gita/gita/blob/main/data/verse.json';}
 const translationCache = new Map();
-const translationNames = {siva:'Swami Sivananda',gambir:'Swami Gambirananda',purohit:'Purohit Swami',sankaran:'S. Sankaranarayan',chinmay:'Swami Chinmayananda'};
+const translationNames = {siva:'Swami Sivananda',gambir:'Swami Gambirananda',purohit:'Purohit Swami',san:'S. Sankaranarayan',adi:'Swami Adidevananda',raman:'Sri Ramanuja',sankar:'Sri Shankaracharya'};
 async function loadEnglishTranslation(){
- const key=ref(selected.chapter,selected.verse), author=$('#translationSelect')?.value||'siva', cacheKey=key+':'+author;
+ const key=ref(selected.chapter,selected.verse), author=$('#translationSelect')?.value||'siva', cacheKey=key+':'+author;const requestKey=key, requestAuthor=author;
  const target=$('#englishTranslation'), credit=$('#translationAuthor');
  if(!target||!credit)return;
  if(translationCache.has(cacheKey)){const t=translationCache.get(cacheKey);target.textContent=t.text;credit.textContent=t.author;return}
@@ -23,7 +23,7 @@ async function loadEnglishTranslation(){
   const text=entry&&(entry.et||entry.translation||entry.en);
   if(!text)throw Error('This translator has no English rendering for this verse in the source API');
   const t={text:String(text).trim(),author:entry.author||translationNames[author]||author};
-  translationCache.set(cacheKey,t);target.textContent=t.text;credit.textContent=t.author+' · Vedic Scriptures source';
+  translationCache.set(cacheKey,t);target.textContent=t.text;credit.textContent=t.author+' · Vedic Scriptures source';\n  const note=entry.ec||entry.sc||entry.hc;const noteNode=$('#commentaryText'),noteCredit=$('#commentaryAuthor');if(noteNode&&noteCredit){noteNode.textContent=note||'No commentary field is available in this source record for this author.';noteCredit.textContent=note?(entry.ec?'English source commentary':entry.sc?'Sanskrit source commentary':'Hindi source commentary')+' · '+t.author:'No commentary supplied';}
  }catch(error){
   target.textContent='This English rendering could not be loaded. The complete Sanskrit and transliteration remain available above. Retry by choosing this verse again, or compare editions at the linked Gītā Supersite.';
   credit.textContent=(translationNames[author]||author)+' · source unavailable';
