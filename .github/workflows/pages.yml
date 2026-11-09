@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Retrieve and validate open Sanskrit corpus
+      - name: Validate preserved Sanskrit source snapshot
         run: node scripts/sync-data.mjs
       - name: Assemble site
         run: |
