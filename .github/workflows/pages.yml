@@ -27,6 +27,7 @@ jobs:
           mkdir dist
           cp index.html styles.css app.js manifest.webmanifest sw.js dist/
           cp -r data dist/data
+          cp -r sanskrit-archive dist/sanskrit-archive
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
