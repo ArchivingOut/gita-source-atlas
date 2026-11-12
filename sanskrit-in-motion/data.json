@@ -1,0 +1,1128 @@
+[
+  {
+    "id": "cloud",
+    "name": "1 · Kālidāsa’s cloud journey",
+    "color": "#c86428",
+    "desc": "An imagined route from central India toward the Himalaya and Alakā.",
+    "pages": "Chapter 1, pp. 103–104; Meghadūta itinerary and note 138.",
+    "stops": [
+      {
+        "n": "Rāmagiri (Ramtek)",
+        "lat": 21.395,
+        "lon": 79.325,
+        "title": "A yakṣa begins in exile",
+        "lede": "The cloud is asked to carry a message north.",
+        "body": "The poem begins at Rāmagiri, identified in the chapter’s note with Ramtek near Nagpur. The separated yakṣa turns a landscape into a messenger’s route: geography carries feeling as well as distance.",
+        "ref": "Pollock, p. 103 and n. 138. Modern identification is approximate."
+      },
+      {
+        "n": "Āmrakūṭa",
+        "lat": 22.68,
+        "lon": 81.76,
+        "title": "The first northern landmark",
+        "lede": "The cloud leaves the Vindhyan region.",
+        "body": "Āmrakūṭa marks an early stage in the cloud’s northward movement. The poem’s sequence makes mountains and rivers part of its narrative structure rather than a neutral background.",
+        "ref": "Pollock, p. 103 and n. 138. Site plotted approximately."
+      },
+      {
+        "n": "Reva / Narmadā",
+        "lat": 22.67,
+        "lon": 77.9,
+        "title": "Crossing the Reva",
+        "lede": "A river gives the imagined journey its next measure.",
+        "body": "The Reva, commonly identified with the Narmadā, is one of the named physical features in the itinerary. The chapter asks readers to see literary geography as both topography and a world shaped by social memory.",
+        "ref": "Pollock, pp. 103–104 and n. 138."
+      },
+      {
+        "n": "Vidisā",
+        "lat": 23.525,
+        "lon": 77.81,
+        "title": "Into Daśārṇa country",
+        "lede": "The cloud approaches a named cultural region.",
+        "body": "Vidisā anchors the route in Daśārṇa. Naming a region and its city lets the poem connect local landscapes to a wider Sanskrit poetic world.",
+        "ref": "Pollock, p. 103 and n. 138."
+      },
+      {
+        "n": "Vetravatī & Nirvindhyā",
+        "lat": 23.55,
+        "lon": 77.82,
+        "title": "Rivers shape the passage",
+        "lede": "Waterways become waypoints in verse.",
+        "body": "The itinerary names the Vetravatī and Nirvindhyā streams. These are literary landmarks; their exact modern course or identification should not be mistaken for a GPS track.",
+        "ref": "Pollock, p. 103 and n. 138. River points are schematic."
+      },
+      {
+        "n": "Ujjayinī & the Śiprā",
+        "lat": 23.176,
+        "lon": 75.788,
+        "title": "A city at the heart of the poem",
+        "lede": "The cloud reaches Avanti’s celebrated city.",
+        "body": "Ujjayinī is a major stop in the Meghadūta itinerary. Pollock uses the route to show how a poem can evoke a socially recognizable landscape through places, movement, and shared cultural references.",
+        "ref": "Pollock, p. 103 and n. 138."
+      },
+      {
+        "n": "Daśapura (Mandsaur)",
+        "lat": 24.071,
+        "lon": 75.07,
+        "title": "The route continues north",
+        "lede": "A city joins the chain of remembered places.",
+        "body": "Daśapura appears after the Avanti region in the route described by the chapter. Its place in the sequence matters: the journey accumulates recognizable stops instead of drawing one simple line across an empty map.",
+        "ref": "Pollock, p. 103 and n. 138. Identification approximate."
+      },
+      {
+        "n": "Kurukṣetra",
+        "lat": 29.97,
+        "lon": 76.878,
+        "title": "A landscape of epic memory",
+        "lede": "The journey enters a place dense with remembered meaning.",
+        "body": "Kurukṣetra is one of the northern landmarks in the chapter’s itinerary. The map makes visible that literary places can carry associations beyond their physical coordinates.",
+        "ref": "Pollock, p. 103 and n. 138."
+      },
+      {
+        "n": "Kanakhala near Hardwar",
+        "lat": 29.93,
+        "lon": 78.15,
+        "title": "At the Himalayan foothills",
+        "lede": "The cloud turns toward the high mountains.",
+        "body": "The route reaches the foothills near Kanakhala and Hardwar. This transition from plains to mountains gives the poem a dramatic change in scale and terrain.",
+        "ref": "Pollock, p. 103 and n. 138. The ancient place is plotted near modern Haridwar."
+      },
+      {
+        "n": "Krauñcarandhra Pass",
+        "lat": 30.9,
+        "lon": 79.2,
+        "title": "A pass into the mountains",
+        "lede": "The itinerary crosses a difficult threshold.",
+        "body": "The named pass is part of the poem’s imagined mountain passage. It is shown schematically because the chapter does not establish a precise modern coordinate.",
+        "ref": "Pollock, p. 103 and n. 138. Schematic location."
+      },
+      {
+        "n": "Mount Kailāsa",
+        "lat": 31.067,
+        "lon": 81.312,
+        "title": "The journey reaches Kailāsa",
+        "lede": "A physical mountain also opens a sacred and poetic horizon.",
+        "body": "Kailāsa is the itinerary’s striking high point. Here the poem’s geographic movement and its mythic atmosphere meet.",
+        "ref": "Pollock, p. 103 and n. 138."
+      },
+      {
+        "n": "Lake Mānas & Alakā",
+        "lat": 30.68,
+        "lon": 81.47,
+        "title": "The message’s imagined destination",
+        "lede": "The cloud arrives at the yakṣa’s world of longing.",
+        "body": "Lake Mānas and Alakā complete the poem’s journey. Alakā is a mythic destination, so this final marker signals literary imagination rather than a claim that the city can be located on a modern map.",
+        "ref": "Pollock, p. 103 and n. 138. Alakā is mythic; point is symbolic."
+      }
+    ]
+  },
+  {
+    "id": "buddha",
+    "name": "2 · The Buddha’s journey",
+    "color": "#147d79",
+    "desc": "A narrative journey linking Kapilavastu and Rājagṛha.",
+    "pages": "Chapter 1, p. 104; Buddhacarita.",
+    "stops": [
+      {
+        "n": "Kapilavastu",
+        "lat": 27.57,
+        "lon": 83.05,
+        "title": "A life begins in a particular place",
+        "lede": "The narrative starts in the Buddha’s home region.",
+        "body": "Pollock points to the Buddhacarita as another text whose movement across places matters. Kapilavastu situates the account in a named landscape rather than an abstract setting.",
+        "ref": "Pollock, p. 104. Modern identification is debated; marker is approximate."
+      },
+      {
+        "n": "Rājagṛha (Rajgir)",
+        "lat": 25.03,
+        "lon": 85.42,
+        "title": "A journey becomes a quest",
+        "lede": "The narrative moves toward Rājagṛha.",
+        "body": "The chapter describes the route from Kapilavastu to Rājagṛha as part of the Buddha’s spiritual and physical quest. Placing it beside the cloud poem shows that Sanskrit literary geography can follow very different kinds of movement.",
+        "ref": "Pollock, p. 104; Buddhacarita."
+      }
+    ]
+  },
+  {
+    "id": "bilhana",
+    "name": "3 · Bilhaṇa’s journey, c. 1080",
+    "color": "#324878",
+    "desc": "A poet’s long southward journey through courts and regions.",
+    "pages": "Chapter 1, p. 104 and n. 140.",
+    "stops": [
+      {
+        "n": "Kashmir",
+        "lat": 34.08,
+        "lon": 74.83,
+        "title": "Bilhaṇa sets out from Kashmir",
+        "lede": "A poet’s journey begins in the north.",
+        "body": "Around 1080, Bilhaṇa left Kashmir and travelled across the subcontinent. The chapter uses his itinerary to show Sanskrit literary life moving through networks of mobility and patronage.",
+        "ref": "Pollock, p. 104 and n. 140."
+      },
+      {
+        "n": "Mathurā",
+        "lat": 27.49,
+        "lon": 77.67,
+        "title": "A stop on the road south",
+        "lede": "The journey passes through Mathurā.",
+        "body": "Mathurā appears among the places in Bilhaṇa’s reported route. The ordered stops make the poet’s movement legible as a connected itinerary.",
+        "ref": "Pollock, p. 104 and n. 140."
+      },
+      {
+        "n": "Kanyakubja (Kannauj)",
+        "lat": 27.05,
+        "lon": 80.15,
+        "title": "Through Kanyakubja",
+        "lede": "The itinerary continues across north India.",
+        "body": "Kanyakubja is one of the named waypoints. The chapter’s account invites a map that follows the sequence, while avoiding the false precision of treating it as a modern road log.",
+        "ref": "Pollock, p. 104 and n. 140. Approximate coordinate."
+      },
+      {
+        "n": "Prayāga",
+        "lat": 25.435,
+        "lon": 81.846,
+        "title": "At the confluence",
+        "lede": "A major northern junction on the route.",
+        "body": "Prayāga lies next in the chapter’s route summary. This stop helps show the scale of Bilhaṇa’s movement between distant literary and political centers.",
+        "ref": "Pollock, p. 104 and n. 140."
+      },
+      {
+        "n": "Vārāṇasī",
+        "lat": 25.317,
+        "lon": 83.006,
+        "title": "A celebrated center",
+        "lede": "The journey reaches Vārāṇasī.",
+        "body": "Vārāṇasī is both a named stop and an important node in a broader cultural geography. The map places it within a journey rather than presenting literary culture as belonging to a single capital.",
+        "ref": "Pollock, p. 104 and n. 140."
+      },
+      {
+        "n": "Mount Kālañjara",
+        "lat": 25.31,
+        "lon": 79.93,
+        "title": "Across the central uplands",
+        "lede": "The route turns toward the Deccan.",
+        "body": "Mount Kālañjara marks a transition in the itinerary. Its location is approximate; the narrative sequence is more secure than a precise travel line.",
+        "ref": "Pollock, p. 104 and n. 140. Approximate."
+      },
+      {
+        "n": "Dahala / Tripur",
+        "lat": 23.17,
+        "lon": 79.94,
+        "title": "The Dahala region",
+        "lede": "Bilhaṇa enters another courtly landscape.",
+        "body": "The route names Dahala and Tripur among the places farther south. These names connect a poet’s movement to regional political worlds.",
+        "ref": "Pollock, p. 104 and n. 140."
+      },
+      {
+        "n": "Saurāṣṭra",
+        "lat": 22.2,
+        "lon": 70.8,
+        "title": "Westward through Saurāṣṭra",
+        "lede": "The journey reaches western India.",
+        "body": "Saurāṣṭra shows that the itinerary is not a straight line. A literary map can preserve these turns and relationships without implying a surveyed route.",
+        "ref": "Pollock, p. 104 and n. 140. Regional marker."
+      },
+      {
+        "n": "Konkana",
+        "lat": 16.99,
+        "lon": 73.31,
+        "title": "Down the western coast",
+        "lede": "The route follows the Konkan region.",
+        "body": "Konkana is part of the southward movement toward Bilhaṇa’s eventual destination. The line is a schematic guide to sequence, not a road.",
+        "ref": "Pollock, p. 104 and n. 140. Regional marker."
+      },
+      {
+        "n": "Kalyāṇa",
+        "lat": 17.33,
+        "lon": 76.83,
+        "title": "A new courtly home",
+        "lede": "Bilhaṇa reaches Kalyāṇa.",
+        "body": "The journey ends at Kalyāṇa, associated with his later courtly career. The endpoint makes visible how literary production could travel with poets and patrons.",
+        "ref": "Pollock, p. 104 and n. 140. Approximate."
+      }
+    ]
+  },
+  {
+    "id": "jagannatha",
+    "name": "4 · Jagannātha’s court connections",
+    "color": "#76508b",
+    "desc": "A network of reported travels and patronage, not one continuous route.",
+    "pages": "Chapter 1, pp. 96–97.",
+    "stops": [
+      {
+        "n": "Andhra",
+        "lat": 16.5,
+        "lon": 80.65,
+        "title": "A point of departure",
+        "lede": "Jagannātha’s literary world spans regions.",
+        "body": "Pollock describes Jagannātha’s movements as linking Andhra with courts and patrons elsewhere. This opening point frames the map as a network of literary connection.",
+        "ref": "Pollock, pp. 96–97. Regional marker; journey chronology is schematic."
+      },
+      {
+        "n": "Jaipur",
+        "lat": 26.912,
+        "lon": 75.787,
+        "title": "Courtly connection at Jaipur",
+        "lede": "A patronage network crosses regions.",
+        "body": "Jaipur is among the places Pollock names in describing Jagannātha’s travels. The map uses a connector to show relationship, not a verified leg-by-leg itinerary.",
+        "ref": "Pollock, pp. 96–97."
+      },
+      {
+        "n": "Delhi",
+        "lat": 28.614,
+        "lon": 77.209,
+        "title": "Delhi in the network",
+        "lede": "The map follows the chapter’s named connection.",
+        "body": "Delhi is another point in the chapter’s account. Together, these places show literary careers moving through changing centers of courtly support.",
+        "ref": "Pollock, pp. 96–97."
+      },
+      {
+        "n": "Udaipur",
+        "lat": 24.585,
+        "lon": 73.712,
+        "title": "From Udaipur toward the east",
+        "lede": "A second reported connection comes into view.",
+        "body": "Pollock also mentions movement from Udaipur toward Assam. These links are better understood as a network of patronage and travel than as a single continuous path.",
+        "ref": "Pollock, pp. 96–97."
+      },
+      {
+        "n": "Assam",
+        "lat": 26.2,
+        "lon": 92.9,
+        "title": "A far-reaching literary geography",
+        "lede": "The chapter’s network reaches Assam.",
+        "body": "Assam broadens the map’s scale. The connection illustrates Pollock’s point that Sanskrit literary culture can be traced across a large, unevenly connected geography.",
+        "ref": "Pollock, pp. 96–97. Regional marker."
+      }
+    ]
+  },
+  {
+    "id": "centres",
+    "name": "5 · A wider literary landscape",
+    "color": "#bf8a2c",
+    "desc": "Other Chapter 1 locations: courts, schools, and textual centers.",
+    "pages": "Chapter 1, locations discussed across pp. 64–119.",
+    "stops": [
+      {
+        "n": "Multan",
+        "lat": 30.197,
+        "lon": 71.468,
+        "title": "Literature beyond a single center",
+        "lede": "A wider map includes regional literary settings.",
+        "body": "Multan is one of the other places tied to Sanskrit literary production in the chapter’s broader discussion. These points help resist treating Sanskrit culture as located in only one court or region.",
+        "ref": "Pollock, chapter 1, p. 64; Samdeśarāsaka. Approximate."
+      },
+      {
+        "n": "Ajmer & Jālor",
+        "lat": 26.45,
+        "lon": 74.64,
+        "title": "Western Indian courtly settings",
+        "lede": "Texts and authors connect smaller courts to wider networks.",
+        "body": "Ajmer and Jālor appear in the chapter’s discussion of literary settings and authors. They extend the map beyond the famous north-south journeys.",
+        "ref": "Pollock, pp. 71, 92–93, 104 n. 142. Approximate."
+      },
+      {
+        "n": "Dhārā",
+        "lat": 22.6,
+        "lon": 75.3,
+        "title": "A courtly center in Mālwa",
+        "lede": "The literary landscape has many regional nodes.",
+        "body": "Dhārā is one of the centers named in the chapter’s wider geography. It is shown here as a place in a cultural network, not as a stop on every itinerary.",
+        "ref": "Pollock, p. 78 n. 84. Approximate."
+      },
+      {
+        "n": "Anahilapaṭṭana",
+        "lat": 23.59,
+        "lon": 72.37,
+        "title": "A western regional center",
+        "lede": "The map keeps regional places in view.",
+        "body": "Anahilapaṭṭana appears among the chapter’s locations. Including it adds context to the argument that Sanskrit literary culture developed through multiple places.",
+        "ref": "Pollock, p. 78 n. 84. Approximate."
+      },
+      {
+        "n": "Orchha",
+        "lat": 25.35,
+        "lon": 78.64,
+        "title": "A later courtly setting",
+        "lede": "Sanskrit shares a changing literary world.",
+        "body": "Orchha appears in the chapter’s discussion of Keshavdas and Brajbhasha. It helps show how Sanskrit culture existed alongside, and in conversation with, other literary languages.",
+        "ref": "Pollock, pp. 101–102."
+      },
+      {
+        "n": "Vijayanagara",
+        "lat": 15.335,
+        "lon": 76.46,
+        "title": "A southern imperial center",
+        "lede": "The chapter’s geography reaches the Deccan and south.",
+        "body": "Vijayanagara belongs to the broader map of literary and political centers discussed in Chapter 1. Its inclusion emphasizes the wide reach of the chapter’s spatial argument.",
+        "ref": "Pollock, pp. 94–95. Approximate."
+      },
+      {
+        "n": "Kāñcīpuram",
+        "lat": 12.835,
+        "lon": 79.7,
+        "title": "A southern center of learning",
+        "lede": "The map’s story is not confined to northern routes.",
+        "body": "Kāñcīpuram is among the southern locations referenced in the chapter. Plotted beside northern and central places, it helps reveal the subcontinent-wide scope of Sanskrit culture.",
+        "ref": "Pollock, p. 78 n. 84. Approximate."
+      },
+      {
+        "n": "Mysore & Tanjavur",
+        "lat": 12.3,
+        "lon": 76.64,
+        "title": "Southern literary worlds",
+        "lede": "The map ends with a landscape of many centers.",
+        "body": "Mysore and Tanjavur appear in the chapter’s broader discussions of Sanskrit literary culture. Together with the other stops, they make the map a network rather than a single origin-to-destination story.",
+        "ref": "Pollock, pp. 118–119. Approximate."
+      },
+      {
+        "n": "Cambodia & Java",
+        "lat": 12.5,
+        "lon": 104.9,
+        "title": "Beyond the subcontinent",
+        "lede": "The chapter’s evidence travels across the sea.",
+        "body": "Pollock discusses inscriptions and Sanskrit beyond the geography imagined in many texts, including evidence from Cambodia and Java. This adds a crucial dimension: Sanskrit literary culture also had transregional lives.",
+        "ref": "Pollock, pp. 108–110. Regional marker; use the map’s zoom out to see the wider scale."
+      },
+      {
+        "n": "Jagaddala",
+        "lat": 25,
+        "lon": 88.1,
+        "title": "A monastery and a manuscript world",
+        "lede": "Textual exchange also moved through institutions.",
+        "body": "Jagaddala monastery and the Subhāṣitaratnakośa appear in the chapter’s later discussion. This point highlights institutions and collections alongside journeys by individual poets.",
+        "ref": "Pollock, pp. 114–115. Approximate."
+      }
+    ]
+  },
+  {
+    "id": "venkata",
+    "name": "6 · Veṅkaṭādhvarin’s aerial tour, c. 1650",
+    "color": "#7ad0c0",
+    "desc": "The chapter follows a literary aerial tour from Himalayan places through northern and southern shrines.",
+    "pages": "Chapter 1, p. 104 and n. 141.",
+    "stops": [
+      {
+        "n": "Badarikāśrama",
+        "lat": 30.74,
+        "lon": 79.49,
+        "title": "A Himalayan sacred place",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      },
+      {
+        "n": "Ayodhyā",
+        "lat": 26.8,
+        "lon": 82.2,
+        "title": "The aerial tour passes Ayodhyā",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      },
+      {
+        "n": "Kāśī / Vārāṇasī",
+        "lat": 25.317,
+        "lon": 83.006,
+        "title": "Kāśī on the route",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      },
+      {
+        "n": "Gurjaradeśa",
+        "lat": 23,
+        "lon": 72.5,
+        "title": "Across Gurjaradeśa",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      },
+      {
+        "n": "Senji",
+        "lat": 12.25,
+        "lon": 79.42,
+        "title": "The southern tour begins",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      },
+      {
+        "n": "Southeast Andhra",
+        "lat": 16.5,
+        "lon": 81,
+        "title": "Temples and monasteries in southeast Andhra",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      },
+      {
+        "n": "Tamil country",
+        "lat": 11,
+        "lon": 78.5,
+        "title": "Across Tamil country",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      },
+      {
+        "n": "Madras",
+        "lat": 13.08,
+        "lon": 80.27,
+        "title": "The coastal English town",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      },
+      {
+        "n": "Melkoṭe",
+        "lat": 12.66,
+        "lon": 76.65,
+        "title": "A shrine in southern Karnataka",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      },
+      {
+        "n": "Uḍupi",
+        "lat": 13.34,
+        "lon": 74.74,
+        "title": "The route reaches the western coast",
+        "lede": "A place in a literary itinerary described in Chapter 1.",
+        "body": "Pollock names this stop in the chapter’s account of a literary journey. The ordered sequence connects places to a poem’s imagined world, a narrated quest, or a broader cultural circuit. The point marks a modern orientation only; it does not claim a precise ancient site.",
+        "ref": "Pollock, p. 104 and n. 141. Approximate modern orientation point; regional stops are schematic."
+      }
+    ]
+  },
+  {
+    "id": "arjuna",
+    "name": "7 · Mahābhārata: Arjuna’s exile circuit",
+    "color": "#f0a6a1",
+    "desc": "The chapter traces an epic circumambulation from Indraprastha and back.",
+    "pages": "Chapter 1, pp. 105–106 and n. 143.",
+    "stops": [
+      {
+        "n": "Indraprastha",
+        "lat": 28.61,
+        "lon": 77.21,
+        "title": "Indraprastha",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Gaṅgādvāra",
+        "lat": 29.96,
+        "lon": 78.17,
+        "title": "Gaṅgādvāra",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Eastern Himalayas",
+        "lat": 29,
+        "lon": 85,
+        "title": "Eastern Himalayas",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Naimiṣa (Avadh)",
+        "lat": 27.6,
+        "lon": 80.6,
+        "title": "Naimiṣa (Avadh)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Kauśikī (Mithilā)",
+        "lat": 26.36,
+        "lon": 85.9,
+        "title": "Kauśikī (Mithilā)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Gayā",
+        "lat": 24.79,
+        "lon": 85,
+        "title": "Gayā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Vaṅga",
+        "lat": 23,
+        "lon": 88,
+        "title": "Vaṅga",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Kaliṅga coast",
+        "lat": 19.8,
+        "lon": 85.8,
+        "title": "Kaliṅga coast",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Gokarṇa",
+        "lat": 14.55,
+        "lon": 74.32,
+        "title": "Gokarṇa",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Prabhāsa",
+        "lat": 20.89,
+        "lon": 70.4,
+        "title": "Prabhāsa",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Dvārakā",
+        "lat": 22.24,
+        "lon": 68.97,
+        "title": "Dvārakā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Puṣkara",
+        "lat": 26.49,
+        "lon": 74.55,
+        "title": "Puṣkara",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Indraprastha",
+        "lat": 28.61,
+        "lon": 77.21,
+        "title": "Indraprastha",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This stop belongs to the Mahābhārata exile circuit described in note 143. The epic’s narrative makes a world through the places it traverses. The coordinate is an approximate modern orientation point, not a claim that this was a historical road.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      }
+    ]
+  },
+  {
+    "id": "digvijaya",
+    "name": "8 · Mahābhārata: four directions of conquest",
+    "color": "#f2bd79",
+    "desc": "The four brothers’ campaigns project a large epic macrospace; these are grouped as directions, not a single route.",
+    "pages": "Chapter 1, p. 105 and n. 143.",
+    "noLine": true,
+    "stops": [
+      {
+        "n": "Anarta (north Gujarat)",
+        "lat": 23,
+        "lon": 70.7,
+        "title": "Anarta (north Gujarat)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Kashmir",
+        "lat": 34.08,
+        "lon": 74.83,
+        "title": "Kashmir",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Balkh",
+        "lat": 36.76,
+        "lon": 66.9,
+        "title": "Balkh",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Videha (Mithilā)",
+        "lat": 26.36,
+        "lon": 85.9,
+        "title": "Videha (Mithilā)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Magadha",
+        "lat": 25,
+        "lon": 85.4,
+        "title": "Magadha",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Aṅga (east Bihar)",
+        "lat": 25,
+        "lon": 86.5,
+        "title": "Aṅga (east Bihar)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Vaṅga",
+        "lat": 23,
+        "lon": 88,
+        "title": "Vaṅga",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Tāmraliptī",
+        "lat": 21.78,
+        "lon": 87.75,
+        "title": "Tāmraliptī",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Tripur",
+        "lat": 23.17,
+        "lon": 79.94,
+        "title": "Tripur",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Potana (north of Hyderabad)",
+        "lat": 17.5,
+        "lon": 78.5,
+        "title": "Potana (north of Hyderabad)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Pāṇḍya country",
+        "lat": 9.5,
+        "lon": 78.1,
+        "title": "Pāṇḍya country",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Draviḍa country",
+        "lat": 11,
+        "lon": 78.5,
+        "title": "Draviḍa country",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Coḍa-Kerala lands",
+        "lat": 10.5,
+        "lon": 76.5,
+        "title": "Coḍa-Kerala lands",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Andhra",
+        "lat": 16.5,
+        "lon": 80.65,
+        "title": "Andhra",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Marubhūmi (Thar)",
+        "lat": 26,
+        "lon": 71,
+        "title": "Marubhūmi (Thar)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Mālava",
+        "lat": 23.5,
+        "lon": 75.5,
+        "title": "Mālava",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Pañcanada (Panjab)",
+        "lat": 31,
+        "lon": 74,
+        "title": "Pañcanada (Panjab)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Pahlava lands",
+        "lat": 32,
+        "lon": 60,
+        "title": "Pahlava lands",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock groups these destinations by the four brothers’ directions of conquest. They are displayed as a set of epic regions, not connected by a route. Regional names use representative coordinates.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      }
+    ]
+  },
+  {
+    "id": "horse",
+    "name": "9 · Mahābhārata: the sacrificial horse",
+    "color": "#e6a56f",
+    "desc": "A horse’s wandering marks an expansive epic circuit across regions.",
+    "pages": "Chapter 1, p. 105 and n. 143.",
+    "stops": [
+      {
+        "n": "Trigarta",
+        "lat": 31.7,
+        "lon": 76.5,
+        "title": "Trigarta",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Prāgjyotiṣa (western Assam)",
+        "lat": 26.2,
+        "lon": 92.9,
+        "title": "Prāgjyotiṣa (western Assam)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Maṇipura",
+        "lat": 24.8,
+        "lon": 93.9,
+        "title": "Maṇipura",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Magadha",
+        "lat": 25,
+        "lon": 85.4,
+        "title": "Magadha",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Vaṅga",
+        "lat": 23,
+        "lon": 88,
+        "title": "Vaṅga",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Cedi",
+        "lat": 23.8,
+        "lon": 79,
+        "title": "Cedi",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Kāśī",
+        "lat": 25.317,
+        "lon": 83.006,
+        "title": "Kāśī",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Kosala",
+        "lat": 26.8,
+        "lon": 82.2,
+        "title": "Kosala",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Draviḍa",
+        "lat": 11,
+        "lon": 78.5,
+        "title": "Draviḍa",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Andhra",
+        "lat": 16.5,
+        "lon": 80.65,
+        "title": "Andhra",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Gokarṇa",
+        "lat": 14.55,
+        "lon": 74.32,
+        "title": "Gokarṇa",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Prabhāsa",
+        "lat": 20.89,
+        "lon": 70.4,
+        "title": "Prabhāsa",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Dvārakā",
+        "lat": 22.24,
+        "lon": 68.97,
+        "title": "Dvārakā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Pañcanada",
+        "lat": 31,
+        "lon": 74,
+        "title": "Pañcanada",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Gandhāra",
+        "lat": 34,
+        "lon": 71,
+        "title": "Gandhāra",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "This is one stop in the sacrificial horse’s epic wandering, a route through named regions that Pollock summarizes from the Mahābhārata. Coordinates are approximate modern orientation points.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      }
+    ]
+  },
+  {
+    "id": "departure",
+    "name": "10 · Mahābhārata: the great departure",
+    "color": "#cfb4e5",
+    "desc": "The Pāṇḍavas’ final journey leaves the familiar world and moves toward mythic geography.",
+    "pages": "Chapter 1, p. 105 and n. 143.",
+    "stops": [
+      {
+        "n": "Lauhitya / Brahmaputra",
+        "lat": 26.2,
+        "lon": 91.7,
+        "title": "Lauhitya / Brahmaputra",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock summarizes the Pāṇḍavas’ final circumambulation as it moves through named rivers, coasts, and mythic places. Mythic geography is shown symbolically and is not a modern location claim.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Northeastern ocean coast",
+        "lat": 22,
+        "lon": 91,
+        "title": "Northeastern ocean coast",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock summarizes the Pāṇḍavas’ final circumambulation as it moves through named rivers, coasts, and mythic places. Mythic geography is shown symbolically and is not a modern location claim.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Dvārakā",
+        "lat": 22.24,
+        "lon": 68.97,
+        "title": "Dvārakā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock summarizes the Pāṇḍavas’ final circumambulation as it moves through named rivers, coasts, and mythic places. Mythic geography is shown symbolically and is not a modern location claim.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Himavan",
+        "lat": 30,
+        "lon": 80,
+        "title": "Himavan",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock summarizes the Pāṇḍavas’ final circumambulation as it moves through named rivers, coasts, and mythic places. Mythic geography is shown symbolically and is not a modern location claim.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Valukārṇava (Ocean of Sand)",
+        "lat": 28,
+        "lon": 68,
+        "title": "Valukārṇava (Ocean of Sand)",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock summarizes the Pāṇḍavas’ final circumambulation as it moves through named rivers, coasts, and mythic places. Mythic geography is shown symbolically and is not a modern location claim.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Mount Meru",
+        "lat": 30,
+        "lon": 85,
+        "title": "Mount Meru",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock summarizes the Pāṇḍavas’ final circumambulation as it moves through named rivers, coasts, and mythic places. Mythic geography is shown symbolically and is not a modern location claim.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      }
+    ]
+  },
+  {
+    "id": "ramayana",
+    "name": "11 · Rāmāyaṇa: Laṅkā to Ayodhyā",
+    "color": "#e89582",
+    "desc": "Rāma’s homeward aerial journey links the southern landscape to Ayodhyā.",
+    "pages": "Chapter 1, p. 105 and n. 144.",
+    "stops": [
+      {
+        "n": "Laṅkā",
+        "lat": 7.87,
+        "lon": 80.77,
+        "title": "Laṅkā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Southern shore and causeway",
+        "lat": 9.3,
+        "lon": 79.4,
+        "title": "Southern shore and causeway",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Mount Hiraṇyanābha",
+        "lat": 10.5,
+        "lon": 78.5,
+        "title": "Mount Hiraṇyanābha",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Kiṣkindhā",
+        "lat": 15.27,
+        "lon": 76.46,
+        "title": "Kiṣkindhā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Mount Ṛṣyamūka",
+        "lat": 15.3,
+        "lon": 76.45,
+        "title": "Mount Ṛṣyamūka",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Pampā",
+        "lat": 15.27,
+        "lon": 76.47,
+        "title": "Pampā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Janasthāna",
+        "lat": 19.8,
+        "lon": 73.8,
+        "title": "Janasthāna",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Godāvarī",
+        "lat": 17,
+        "lon": 81.8,
+        "title": "Godāvarī",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Mount Citrakūṭa",
+        "lat": 25.2,
+        "lon": 80.86,
+        "title": "Mount Citrakūṭa",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Yamunā",
+        "lat": 25.4,
+        "lon": 81.8,
+        "title": "Yamunā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Gaṅgā",
+        "lat": 25.3,
+        "lon": 82,
+        "title": "Gaṅgā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Śṛṅgaverapura",
+        "lat": 25.54,
+        "lon": 81.72,
+        "title": "Śṛṅgaverapura",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      },
+      {
+        "n": "Ayodhyā",
+        "lat": 26.8,
+        "lon": 82.2,
+        "title": "Ayodhyā",
+        "lede": "A named place in the epic geography discussed by Pollock.",
+        "body": "Pollock names this place in the Rāmāyaṇa’s aerial homeward journey. The sequence evokes a literary world; its sites and identifications have different levels of certainty. The coordinate is an approximate modern orientation point.",
+        "ref": "Pollock, Chapter 1, pp. 105–106, nn. 143–144. Approximate modern orientation point; epic geography is literary."
+      }
+    ]
+  }
+]
